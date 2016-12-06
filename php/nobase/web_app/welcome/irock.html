@@ -2,17 +2,19 @@
 	<head>
 		<title>iRock - The Virtual Pet Rock</title>
 		<script type="text/javascript">
-			function validateNumber(value){
-				// Validate the number
-				if (!isNumber(value))
-					alert("Please enter a number.");
+			function touchRock(){
+				var userName = prompt("What is your name?", "Enter your name here.");
+				if (userName){
+					alert("It is good to meet you,"+ userName + ".");
+					document.getElementById("rockImg").src = "rock_happy.png";
+				}
 			}
 		</script>
 	</head>
 
-	<body>
+	<body onload = "alert('Hello, I am your pet rock.';">
 		<div style="margin-top:100px; text=align:center">
-			<img id="rockImg" src="rock.png" alt="oRock"/>
+			<img id="rockImg" src="rock.png" alt="oRock" style="cursor:pointer" onclick = "touchRock()"/>
 		</div>
 	</body>
 </html>
